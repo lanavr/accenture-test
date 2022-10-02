@@ -15,7 +15,7 @@ class InsuranceQuotePage {
 		cy.get('#make').select(vehicle.make);
 		cy.get('#model').select(vehicle.model);
 		cy.get('#cylindercapacity').type(vehicle.cylindercapacity);
-		cy.get("#engineperformance").type(vehicle.engineperformance);
+		cy.get('#engineperformance').type(vehicle.engineperformance);
 		cy.get('#dateofmanufacture').type(vehicle.dateofmanufacture);
 		cy.get('#numberofseats').select(vehicle.numberofseats);
 		cy.get('#righthanddriveno').next().click();
@@ -69,11 +69,11 @@ class InsuranceQuotePage {
 	
 	clickNext(screen) {
 		cy.log(screen);
-		cy.get(".next").eq(screen).click();
+		cy.get('.next').eq(screen).click();
 	}
 	
 	sendEmail() {
-		cy.get("#sendemail").click();
+		cy.get('#sendemail').click();
 	}
 	
 	verifySuccessMessage() {

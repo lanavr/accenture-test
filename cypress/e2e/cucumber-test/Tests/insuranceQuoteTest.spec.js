@@ -15,23 +15,23 @@ When('Customer clicks next', function() {
 });
 
 
-Given("Customer filled in all insurant data", function (dataTable) {
+Given('Customer filled in all insurant data', function (dataTable) {
 	dataTable.transpose().hashes().map((insurant) => {
 		insuranceQuote.enterInsurantData(insurant);
 	});
 });
 
-Given("Customer filled in all product data", function (dataTable) {
+Given('Customer filled in all product data', function (dataTable) {
 	dataTable.transpose().hashes().map((product) => {
 		insuranceQuote.enterProductData(product);
 	});
 });
 
-Given("Customer chose a price option", function () {
+Given('Customer chose a price option', function () {
 	insuranceQuote.selectPriceOption();
 });
 
-Given("Customer filled in email form", function (dataTable) {
+Given('Customer filled in email form', function (dataTable) {
 	dataTable.transpose().hashes().map((account) => {
 		insuranceQuote.enterEmailFormData(account);
 	});
@@ -39,7 +39,6 @@ Given("Customer filled in email form", function (dataTable) {
 
 When('Customer clicks send', function() {
 	insuranceQuote.sendEmail();
-	this.screen++;
 });
 
 Then('Success message is displayed', function() {
