@@ -1,0 +1,20 @@
+{
+  "name": "accenture-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run"
+  },
+  "author": "Lana Varussa",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^13.0.2",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "@esbuild-plugins/node-modules-polyfill": "^0.1.4",
+    "cypress": "^10.9.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/e2e/cucumber-test/**/*.{js,ts}"
+  },
+  "description": ""
+}
