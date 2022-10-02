@@ -2,6 +2,23 @@ class InsuranceQuotePage {
 	enterUrl() {
 		cy.visit("http://sampleapp.tricentis.com/101/app.php");
 	}
+  
+  enterData(formName, data) {
+    switch(formName) {
+      case 'vehicle': 
+        this.enterVehicleData(data);
+        break;
+      case 'insurant':
+        this.enterInsurantData(data);
+        break;
+      case 'product':
+        this.enterProductData(data);
+        break;
+      case 'email':
+        this.enterEmailFormData(data);
+        break;
+    }
+  }
 	
 	enterVehicleData(vehicle) {
 	//	let objectKeys = Object.keys(vehicle);
@@ -77,7 +94,8 @@ class InsuranceQuotePage {
 	}
 	
 	verifySuccessMessage() {
-		return cy.get('h2').contains('Sending e-mail success!').should('be.visible', {timeout: 10000});
+    cy.wait(9999);
+		return cy.get('h2').contains('Sending e-mail success!').should('be.visible');
 	}
 }
 const insuranceQuote = new InsuranceQuotePage();

@@ -1,7 +1,8 @@
 Feature: Automobile Insurance Quote Form
 
 	Scenario: Customer has all required vehicle data 
-		Given Customer filled in all required vehicle details 
+    Given Customer accessed the website
+		And Customer filled in all required vehicle data 
 		| make               | Audi       |
 		| model              | Scooter    |
 		| cylindercapacity   | 2000       |
@@ -16,7 +17,7 @@ Feature: Automobile Insurance Quote Form
 		| annualmileage      | 3000       | 
 		When Customer clicks next
 	
-		Given Customer filled in all insurant data
+		Given Customer filled in all required insurant data
 		| firstname     | Lizzy      |
 		| lastname      | McFizzy    |
 		| birthdate     | 12/12/1999 |
@@ -28,7 +29,7 @@ Feature: Automobile Insurance Quote Form
 		| website       | webie.com  |
 		When Customer clicks next
 
-		Given Customer filled in all product data
+		Given Customer filled in all required product data
 		| startdate       | 12/12/2022    |
 		| insurancesum    | 3000000       |
 		| meritrating     | Bonus 1       |
@@ -39,7 +40,7 @@ Feature: Automobile Insurance Quote Form
 		Given Customer chose a price option
 		When Customer clicks next
 		
-		Given Customer filled in email form
+		Given Customer filled in all required email data
 		| email           | lizzy@mail.com       |
 		| phone           | 213131231            |
 		| username        | lizzy                |
