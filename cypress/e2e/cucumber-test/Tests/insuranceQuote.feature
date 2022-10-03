@@ -1,6 +1,6 @@
 Feature: Automobile Insurance Quote Form
 
-  Scenario: Customer has all required vehicle data 
+  Scenario: Customer has all required data 
     Given Customer accessed the website
     And Customer filled in all required vehicle data 
     | make               | Audi       |

@@ -43,7 +43,6 @@ class InsuranceQuotePage {
     cy.get('#listprice').type(vehicle.listprice);
     cy.get('#licenseplatenumber').type(vehicle.licenseplatenumber);
     cy.get('#annualmileage').type(vehicle.annualmileage);
-    return this;
   }
 
   enterInsurantData(insurant) {
@@ -81,11 +80,7 @@ class InsuranceQuotePage {
     cy.get('#Comments').type(account.Comments);
   }
 
-  checkVehicleData(vehicle) {
-  }
-
   clickNext(screen) {
-    cy.log(screen);
     cy.get('.next').eq(screen).click();
   }
 
